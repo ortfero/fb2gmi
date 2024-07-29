@@ -61,9 +61,9 @@ void main(List<String> arguments) async {
   final body = xml.rootElement.getElement('body')!;
   final gmiChapters = List<GmiBookChapter>.empty();
   body
-      .findAllElements('section')
-      .map((section) => parseChapter(section))
-      .forEach((chapter) => {if (chapter != null) gmiChapters.add(chapter!)});
+   .findAllElements('section')
+   .map((section) => parseChapter(section))
+   .forEach((chapter) => {if (chapter != null) gmiChapters.add(chapter!)});
   //print(chapter);
   // if(chapter != null) gmiChapters.add(chapter);
   //});
